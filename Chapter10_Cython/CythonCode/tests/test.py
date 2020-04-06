@@ -39,9 +39,10 @@ cython_timer = Timer(
     'fast_math.cython_clip(a, -1, 1, a)', 
     setup=import_string)
 
+num_runs = 100_000
 print('fast_math.pure_python_clip')
-print(np.mean(python_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(python_timer.repeat(repeat=3, number=num_runs)) / 100_000)
 print('fast_math.numpy_clip')
-print(np.mean(numpy_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(numpy_timer.repeat(repeat=3, number=num_runs)) / 100_000)
 print('fast_math.cython_clip')
-print(np.mean(cython_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(cython_timer.repeat(repeat=3, number=100_000)) / 100_000)

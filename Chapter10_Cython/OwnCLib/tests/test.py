@@ -48,11 +48,12 @@ c_api_timer = Timer(
     'fast_math.c_api_clip(list(a), -1, 1, list(a))', 
     setup=import_string)
 
+num_runs = 100_000
 print('fast_math.pure_python_clip')
-print(np.mean(python_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(python_timer.repeat(repeat=3, number=num_runs)) / num_runs)
 print('fast_math.numpy_clip')
-print(np.mean(numpy_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(numpy_timer.repeat(repeat=3, number=num_runs)) / num_runs)
 print('fast_math.cython_clip')
-print(np.mean(cython_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(cython_timer.repeat(repeat=3, number=num_runs)) / num_runs)
 print('fast_math.c_api_clip')
-print(np.mean(c_api_timer.repeat(repeat=3, number=100_000)))
+print(np.mean(c_api_timer.repeat(repeat=3, number=num_runs)) / num_runs)

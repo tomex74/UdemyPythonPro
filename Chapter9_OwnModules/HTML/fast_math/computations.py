@@ -1,9 +1,32 @@
-def foo():
-    '''This is a foo function.
-    '''
-    print("foo")
+'''
+computations.py
+====================================
 
-def bar():
-    '''This is a bar function.
+The core functions of the module.
+'''
+
+def foo(s=None):
+    '''This is a foo function.
+
+    Parameters
+    ---------
+    s : str
+        Text to print (Default None)
     '''
-    print("bar")
+    if s:
+        print(s)
+    else:
+        print('foo')
+
+def bar(s=None):
+    '''This is a bar function.
+
+    Parameters
+    ---------
+    s : str
+        Text to print (Default None)
+    '''
+    if s:
+        print(s)
+    else:
+        print('bar')
