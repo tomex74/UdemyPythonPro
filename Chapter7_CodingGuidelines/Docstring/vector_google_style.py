@@ -5,17 +5,14 @@ class Vector2D:
     def __init__(self, x=0, y=0):
         """Constrcutor of the vector class.
 
-        Parameters
-        ----------
-        x : scalar
-            The value of the x-coordinate
-        y : scalar
-            The value of the y-coordinate
+        Args:
+            x (scalar): The value of the x-coordinate
+            x (scalar): The value of the y-coordinate
         """
         self.x = x
         self.y = y
 
-    def __call__(self):
+    def __call__(self):   
         """Returns the representation of the vector as a string.
         """
         self.__repr__()
@@ -34,10 +31,8 @@ class Vector2D:
         """Returns the absolute value, which is the magnitude
         of the vector
         
-        Returns
-        -------
-        float
-            The absolute value of the vector.
+        Returns:
+            float: The absolute value of the vector.
         """
         return sqrt(pow(self.x) + pow(self.y))
 
@@ -45,9 +40,7 @@ class Vector2D:
         """Returns if any value of the vector is not zero.
         
         Returns
-        -------
-        bool
-            If any value is not equal to zero.
+            bool: If any value is not equal to zero.
         """
         return bool(abs(self))
 
@@ -55,15 +48,11 @@ class Vector2D:
         """Checks wether the vector is equal to the other vector, by
         comparing all values.
         
-        Parameters
-        ----------
-        other : Vector2D
-            Vector that is left of the equallity operator.
+        Args:
+            other (Vector2D): Vector that is left of the equallity operator.
         
-        Returns
-        -------
-        bool
-            If both vectors have the same values.
+        Returns:
+            bool: If both vectors have the same values.
         """
         if self.x == other.x and self.y == other.y:
             return True
@@ -71,57 +60,42 @@ class Vector2D:
             return False
 
     def __add__(self, other):
-        """Adds the vector with another vector.
+        """[summary]
         
-        Parameters
-        ----------
-        other : Vector2D
-            Vector that is left of the plus operator.
+        Args:
+            other ([type]): [description]
         
-        Returns
-        -------
-        Vector2D
-            The result vector of the addition.
+        Returns:
+            [type]: [description]
         """
         x = self.x + other.x
         y = self.y + other.y
         return Vector2D(x, y)
 
     def __sub__(self, other):
-        """Subtracts the vector with another vector.
+        """[summary]
         
-        Parameters
-        ----------
-        other : Vector2D
-            Vector that is left of the minus operator.
+        Args:
+            other ([type]): [description]
         
-        Returns
-        -------
-        Vector2D
-            The result vector of the subtraction.
+        Returns:
+            [type]: [description]
         """
         x = self.x - other.x
         y = self.y - other.y
         return Vector2D(x, y)
 
     def __mul__(self, other):
-        """Multiplicates the vector with i.) another vector, or ii.) with a scalar.
-
-        Parameters
-        ----------
-        other : Vector2D or scalar
-            Vector (or scalar) that is left of the multiplication operator.
+        """[summary]
         
-        Returns
-        -------
-        Vector2D
-            The result vector of the vector * scalar multiplication, or
-            the result scalar of the vector * vector multiplication.
-
-        Raises
-        ------
-        ValueError
-            Other must be a number or a Vector2D.
+        Args:
+            other ([type]): [description]
+        
+        Raises:
+            TypeError: [description]
+        
+        Returns:
+            [type]: [description]
         """
         if isinstance(other, Vector2D):
             return self.x * other.x + self.y * other.y
@@ -131,22 +105,16 @@ class Vector2D:
             raise TypeError('Passed in argument must be from type Vector2D or Number.')
 
     def __truediv__(self, scalar):
-        """Divides the vector by a scalar value.
+        """[summary]
         
-        Parameters
-        ----------
-        scalar : number
-            Scalar value to divide by.
+        Args:
+            scalar ([type]): [description]
         
-        Returns
-        -------
-        Vector2D
-            The result of the scalar division.
+        Raises:
+            ValueError: [description]
         
-        Raises
-        ------
-        ValueError
-            If the passed in scalar is zero.
+        Returns:
+            [type]: [description]
         """
         if scalar == 0.0:
             raise ValueError('Passed in a scalar value of zero.')

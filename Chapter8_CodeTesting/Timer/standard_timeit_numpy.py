@@ -8,7 +8,7 @@ print(M)
 M_inverse = np.linalg.inv(M)
 print(M_inverse)
 
-# Timin_valueg test
+# Timing test
 import_string = \
 '''import numpy as np
 from __main__ import M'''  

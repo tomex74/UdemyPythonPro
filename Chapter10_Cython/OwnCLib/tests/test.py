@@ -27,7 +27,7 @@ print(a)
 
 a = np.random.randint(-2, 2, size=100)
 
-# Timin_valueg test
+# Timing test
 import_string = \
 '''from __main__ import a
 import fast_math'''  
