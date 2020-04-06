@@ -707,11 +707,11 @@ static CYTHON_INLINE PyObject* __Pyx_PyNumber_IntOrLong(PyObject* x);
 static CYTHON_INLINE Py_ssize_t __Pyx_PyIndex_AsSsize_t(PyObject*);
 static CYTHON_INLINE PyObject * __Pyx_PyInt_FromSize_t(size_t);
 #if CYTHON_ASSUME_SAFE_MACROS
-#define __pyx_PyFloat_AsDouble(x) (PyFloat_CheckExact(x) ? PyFloat_AS_DOUBLE(x) : PyFloat_AsDouble(x))
+#define __pyx_PyFloat_Aslong(x) (PyFloat_CheckExact(x) ? PyFloat_AS_long(x) : PyFloat_Aslong(x))
 #else
-#define __pyx_PyFloat_AsDouble(x) PyFloat_AsDouble(x)
+#define __pyx_PyFloat_Aslong(x) PyFloat_Aslong(x)
 #endif
-#define __pyx_PyFloat_AsFloat(x) ((float) __pyx_PyFloat_AsDouble(x))
+#define __pyx_PyFloat_AsFloat(x) ((float) __pyx_PyFloat_Aslong(x))
 #if PY_MAJOR_VERSION >= 3
 #define __Pyx_PyNumber_Int(x) (PyLong_CheckExact(x) ? __Pyx_NewRef(x) : PyNumber_Long(x))
 #else
@@ -1185,8 +1185,8 @@ static void __Pyx_Raise(PyObject *type, PyObject *value, PyObject *tb, PyObject 
 static void __Pyx_RaiseArgtupleInvalid(const char* func_name, int exact,
     Py_ssize_t num_min, Py_ssize_t num_max, Py_ssize_t num_found);
 
-/* RaiseDoubleKeywords.proto */
-static void __Pyx_RaiseDoubleKeywordsError(const char* func_name, PyObject* kw_name);
+/* RaiselongKeywords.proto */
+static void __Pyx_RaiselongKeywordsError(const char* func_name, PyObject* kw_name);
 
 /* ParseKeywords.proto */
 static int __Pyx_ParseOptionalKeywords(PyObject *kwds, PyObject **argnames[],\
@@ -1638,7 +1638,7 @@ static int __Pyx_ValidateAndInit_memviewslice(
                 PyObject *original_obj);
 
 /* ObjectToMemviewSlice.proto */
-static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_double(PyObject *, int writable_flag);
+static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_long(PyObject *, int writable_flag);
 
 /* MemviewSliceCopyTemplate.proto */
 static __Pyx_memviewslice
@@ -1695,7 +1695,7 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memviewslice, double, double, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memviewslice, long, long, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -1729,7 +1729,7 @@ static void __pyx_memoryview_refcount_objects_in_slice(char *, Py_ssize_t *, Py_
 static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size_t, void *, int); /*proto*/
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
-static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_long = { "long", NULL, sizeof(long), { 0 }, 0, 'R', 0, 0 };
 #define __Pyx_MODULE_NAME "fast_math.cython_computations"
 extern int __pyx_module_is_main_fast_math__cython_computations;
 int __pyx_module_is_main_fast_math__cython_computations = 0;
@@ -1925,7 +1925,7 @@ static PyObject *__pyx_kp_s_unable_to_allocate_array_data;
 static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_pf_9fast_math_19cython_computations_cython_clip(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_out); /* proto */
+static PyObject *__pyx_pf_9fast_math_19cython_computations_cython_clip(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a, long __pyx_v_min_value, long __pyx_v_max_value, __Pyx_memviewslice __pyx_v_out); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2008,13 +2008,13 @@ static PyObject *__pyx_codeobj__27;
 /* "fast_math/cython_computations.pyx":5
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
- * cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):             # <<<<<<<<<<<<<<
+ * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):             # <<<<<<<<<<<<<<
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")
  */
 
 static PyObject *__pyx_pw_9fast_math_19cython_computations_1cython_clip(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memviewslice __pyx_v_a, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memviewslice __pyx_v_a, long __pyx_v_min_value, long __pyx_v_max_value, __Pyx_memviewslice __pyx_v_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2023,9 +2023,9 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   Py_ssize_t __pyx_t_3;
   Py_ssize_t __pyx_t_4;
   Py_ssize_t __pyx_t_5;
-  double __pyx_t_6;
+  long __pyx_t_6;
   Py_ssize_t __pyx_t_7;
-  double __pyx_t_8;
+  long __pyx_t_8;
   Py_ssize_t __pyx_t_9;
   Py_ssize_t __pyx_t_10;
   Py_ssize_t __pyx_t_11;
@@ -2033,7 +2033,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
 
   /* "fast_math/cython_computations.pyx":6
  * @cython.wraparound(False)
- * cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):
+ * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:             # <<<<<<<<<<<<<<
  *         raise ValueError("min_value must be <= max_value")
  *     if a.shape[0] != out.shape[0]:
@@ -2042,7 +2042,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   if (unlikely(__pyx_t_1)) {
 
     /* "fast_math/cython_computations.pyx":7
- * cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):
+ * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")             # <<<<<<<<<<<<<<
  *     if a.shape[0] != out.shape[0]:
@@ -2056,7 +2056,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
 
     /* "fast_math/cython_computations.pyx":6
  * @cython.wraparound(False)
- * cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):
+ * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:             # <<<<<<<<<<<<<<
  *         raise ValueError("min_value must be <= max_value")
  *     if a.shape[0] != out.shape[0]:
@@ -2112,11 +2112,11 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
  *         out[i] = (a[i] if a[i] < max_value else max_value) if a[i] > min_value else min_value             # <<<<<<<<<<<<<<
  */
     __pyx_t_7 = __pyx_v_i;
-    if ((((*((double *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_7 * __pyx_v_a.strides[0]) ))) > __pyx_v_min_value) != 0)) {
+    if ((((*((long *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_7 * __pyx_v_a.strides[0]) ))) > __pyx_v_min_value) != 0)) {
       __pyx_t_9 = __pyx_v_i;
-      if ((((*((double *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_9 * __pyx_v_a.strides[0]) ))) < __pyx_v_max_value) != 0)) {
+      if ((((*((long *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_9 * __pyx_v_a.strides[0]) ))) < __pyx_v_max_value) != 0)) {
         __pyx_t_10 = __pyx_v_i;
-        __pyx_t_8 = (*((double *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_10 * __pyx_v_a.strides[0]) )));
+        __pyx_t_8 = (*((long *) ( /* dim=0 */ (__pyx_v_a.data + __pyx_t_10 * __pyx_v_a.strides[0]) )));
       } else {
         __pyx_t_8 = __pyx_v_max_value;
       }
@@ -2125,13 +2125,13 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
       __pyx_t_6 = __pyx_v_min_value;
     }
     __pyx_t_11 = __pyx_v_i;
-    *((double *) ( /* dim=0 */ (__pyx_v_out.data + __pyx_t_11 * __pyx_v_out.strides[0]) )) = __pyx_t_6;
+    *((long *) ( /* dim=0 */ (__pyx_v_out.data + __pyx_t_11 * __pyx_v_out.strides[0]) )) = __pyx_t_6;
   }
 
   /* "fast_math/cython_computations.pyx":5
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
- * cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):             # <<<<<<<<<<<<<<
+ * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):             # <<<<<<<<<<<<<<
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")
  */
@@ -2153,8 +2153,8 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
 static PyObject *__pyx_pw_9fast_math_19cython_computations_1cython_clip(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyObject *__pyx_pw_9fast_math_19cython_computations_1cython_clip(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_a = { 0, 0, { 0 }, { 0 }, { 0 } };
-  double __pyx_v_min_value;
-  double __pyx_v_max_value;
+  long __pyx_v_min_value;
+  long __pyx_v_max_value;
   __Pyx_memviewslice __pyx_v_out = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -2212,10 +2212,10 @@ static PyObject *__pyx_pw_9fast_math_19cython_computations_1cython_clip(PyObject
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
       values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
     }
-    __pyx_v_a = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_a.memview)) __PYX_ERR(0, 5, __pyx_L3_error)
-    __pyx_v_min_value = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_min_value == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 5, __pyx_L3_error)
-    __pyx_v_max_value = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_max_value == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 5, __pyx_L3_error)
-    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_ds_double(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 5, __pyx_L3_error)
+    __pyx_v_a = __Pyx_PyObject_to_MemoryviewSlice_ds_long(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_a.memview)) __PYX_ERR(0, 5, __pyx_L3_error)
+    __pyx_v_min_value = __pyx_PyFloat_Aslong(values[1]); if (unlikely((__pyx_v_min_value == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 5, __pyx_L3_error)
+    __pyx_v_max_value = __pyx_PyFloat_Aslong(values[2]); if (unlikely((__pyx_v_max_value == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 5, __pyx_L3_error)
+    __pyx_v_out = __Pyx_PyObject_to_MemoryviewSlice_ds_long(values[3], PyBUF_WRITABLE); if (unlikely(!__pyx_v_out.memview)) __PYX_ERR(0, 5, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
@@ -2232,7 +2232,7 @@ static PyObject *__pyx_pw_9fast_math_19cython_computations_1cython_clip(PyObject
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9fast_math_19cython_computations_cython_clip(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_out) {
+static PyObject *__pyx_pf_9fast_math_19cython_computations_cython_clip(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_a, long __pyx_v_min_value, long __pyx_v_max_value, __Pyx_memviewslice __pyx_v_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -15915,7 +15915,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
   /* "fast_math/cython_computations.pyx":7
- * cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):
+ * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")             # <<<<<<<<<<<<<<
  *     if a.shape[0] != out.shape[0]:
@@ -16993,8 +16993,8 @@ static void __Pyx_RaiseArgtupleInvalid(
                  (num_expected == 1) ? "" : "s", num_found);
 }
 
-/* RaiseDoubleKeywords */
-static void __Pyx_RaiseDoubleKeywordsError(
+/* RaiselongKeywords */
+static void __Pyx_RaiselongKeywordsError(
     const char* func_name,
     PyObject* kw_name)
 {
@@ -17090,7 +17090,7 @@ static int __Pyx_ParseOptionalKeywords(
     }
     return 0;
 arg_passed_twice:
-    __Pyx_RaiseDoubleKeywordsError(function_name, key);
+    __Pyx_RaiselongKeywordsError(function_name, key);
     goto bad;
 invalid_keyword_type:
     PyErr_Format(PyExc_TypeError,
@@ -18394,12 +18394,12 @@ static PyObject* __Pyx_PyInt_AddObjC(PyObject *op1, PyObject *op2, CYTHON_UNUSED
     #endif
     if (PyFloat_CheckExact(op1)) {
         const long b = intval;
-        double a = PyFloat_AS_DOUBLE(op1);
-            double result;
+        long a = PyFloat_AS_long(op1);
+            long result;
             PyFPE_START_PROTECT("add", return NULL)
-            result = ((double)a) + (double)b;
+            result = ((long)a) + (long)b;
             PyFPE_END_PROTECT(result)
-            return PyFloat_FromDouble(result);
+            return PyFloat_Fromlong(result);
     }
     return (inplace ? PyNumber_InPlaceAdd : PyNumber_Add)(op1, op2);
 }
@@ -19010,8 +19010,8 @@ static const char* __Pyx_BufFmt_DescribeTypeChar(char ch, int is_complex) {
     case 'q': return "'long long'";
     case 'Q': return "'unsigned long long'";
     case 'f': return (is_complex ? "'complex float'" : "'float'");
-    case 'd': return (is_complex ? "'complex double'" : "'double'");
-    case 'g': return (is_complex ? "'complex long double'" : "'long double'");
+    case 'd': return (is_complex ? "'complex long'" : "'long'");
+    case 'g': return (is_complex ? "'complex long long'" : "'long long'");
     case 'T': return "a struct";
     case 'O': return "Python object";
     case 'P': return "a pointer";
@@ -19029,7 +19029,7 @@ static size_t __Pyx_BufFmt_TypeCharToStandardSize(char ch, int is_complex) {
     case 'f': return (is_complex ? 8 : 4);
     case 'd': return (is_complex ? 16 : 8);
     case 'g': {
-      PyErr_SetString(PyExc_ValueError, "Python does not define a standard format string size for long double ('g')..");
+      PyErr_SetString(PyExc_ValueError, "Python does not define a standard format string size for long long ('g')..");
       return 0;
     }
     case 'O': case 'P': return sizeof(void*);
@@ -19048,8 +19048,8 @@ static size_t __Pyx_BufFmt_TypeCharToNativeSize(char ch, int is_complex) {
     case 'q': case 'Q': return sizeof(PY_LONG_LONG);
     #endif
     case 'f': return sizeof(float) * (is_complex ? 2 : 1);
-    case 'd': return sizeof(double) * (is_complex ? 2 : 1);
-    case 'g': return sizeof(long double) * (is_complex ? 2 : 1);
+    case 'd': return sizeof(long) * (is_complex ? 2 : 1);
+    case 'g': return sizeof(long long) * (is_complex ? 2 : 1);
     case 'O': case 'P': return sizeof(void*);
     default: {
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
@@ -19061,8 +19061,8 @@ typedef struct { char c; short x; } __Pyx_st_short;
 typedef struct { char c; int x; } __Pyx_st_int;
 typedef struct { char c; long x; } __Pyx_st_long;
 typedef struct { char c; float x; } __Pyx_st_float;
-typedef struct { char c; double x; } __Pyx_st_double;
-typedef struct { char c; long double x; } __Pyx_st_longdouble;
+typedef struct { char c; long x; } __Pyx_st_long;
+typedef struct { char c; long long x; } __Pyx_st_longlong;
 typedef struct { char c; void *x; } __Pyx_st_void_p;
 #ifdef HAVE_LONG_LONG
 typedef struct { char c; PY_LONG_LONG x; } __Pyx_st_longlong;
@@ -19077,8 +19077,8 @@ static size_t __Pyx_BufFmt_TypeCharToAlignment(char ch, CYTHON_UNUSED int is_com
     case 'q': case 'Q': return sizeof(__Pyx_st_longlong) - sizeof(PY_LONG_LONG);
 #endif
     case 'f': return sizeof(__Pyx_st_float) - sizeof(float);
-    case 'd': return sizeof(__Pyx_st_double) - sizeof(double);
-    case 'g': return sizeof(__Pyx_st_longdouble) - sizeof(long double);
+    case 'd': return sizeof(__Pyx_st_long) - sizeof(long);
+    case 'g': return sizeof(__Pyx_st_longlong) - sizeof(long long);
     case 'P': case 'O': return sizeof(__Pyx_st_void_p) - sizeof(void*);
     default:
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
@@ -19093,8 +19093,8 @@ typedef struct { short x; char c; } __Pyx_pad_short;
 typedef struct { int x; char c; } __Pyx_pad_int;
 typedef struct { long x; char c; } __Pyx_pad_long;
 typedef struct { float x; char c; } __Pyx_pad_float;
-typedef struct { double x; char c; } __Pyx_pad_double;
-typedef struct { long double x; char c; } __Pyx_pad_longdouble;
+typedef struct { long x; char c; } __Pyx_pad_long;
+typedef struct { long long x; char c; } __Pyx_pad_longlong;
 typedef struct { void *x; char c; } __Pyx_pad_void_p;
 #ifdef HAVE_LONG_LONG
 typedef struct { PY_LONG_LONG x; char c; } __Pyx_pad_longlong;
@@ -19109,8 +19109,8 @@ static size_t __Pyx_BufFmt_TypeCharToPadding(char ch, CYTHON_UNUSED int is_compl
     case 'q': case 'Q': return sizeof(__Pyx_pad_longlong) - sizeof(PY_LONG_LONG);
 #endif
     case 'f': return sizeof(__Pyx_pad_float) - sizeof(float);
-    case 'd': return sizeof(__Pyx_pad_double) - sizeof(double);
-    case 'g': return sizeof(__Pyx_pad_longdouble) - sizeof(long double);
+    case 'd': return sizeof(__Pyx_pad_long) - sizeof(long);
+    case 'g': return sizeof(__Pyx_pad_longlong) - sizeof(long long);
     case 'P': case 'O': return sizeof(__Pyx_pad_void_p) - sizeof(void*);
     default:
       __Pyx_BufFmt_RaiseUnexpectedChar(ch);
@@ -19668,7 +19668,7 @@ no_fail:
 }
 
 /* ObjectToMemviewSlice */
-  static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_double(PyObject *obj, int writable_flag) {
+  static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_ds_long(PyObject *obj, int writable_flag) {
     __Pyx_memviewslice result = { 0, 0, { 0 }, { 0 }, { 0 } };
     __Pyx_BufFmt_StackElem stack[1];
     int axes_specs[] = { (__Pyx_MEMVIEW_DIRECT | __Pyx_MEMVIEW_STRIDED) };
@@ -19679,7 +19679,7 @@ no_fail:
     }
     retcode = __Pyx_ValidateAndInit_memviewslice(axes_specs, 0,
                                                  PyBUF_RECORDS_RO | writable_flag, 1,
-                                                 &__Pyx_TypeInfo_double, stack,
+                                                 &__Pyx_TypeInfo_long, stack,
                                                  &result, obj);
     if (unlikely(retcode == -1))
         goto __pyx_fail;

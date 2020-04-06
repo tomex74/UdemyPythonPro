@@ -2,7 +2,7 @@ cimport cython
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
-cpdef cython_clip(double[:] a, double min_value, double max_value, double[:] out):
+cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
     if min_value > max_value:
         raise ValueError("min_value must be <= max_value")
     if a.shape[0] != out.shape[0]:

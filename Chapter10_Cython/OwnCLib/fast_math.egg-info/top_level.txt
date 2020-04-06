@@ -1,2 +1,2 @@
-FastMathComputations
 fast_math
+fast_math_c_api

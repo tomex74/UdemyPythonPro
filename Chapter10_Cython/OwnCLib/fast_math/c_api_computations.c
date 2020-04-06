@@ -1,6 +1,6 @@
 #include "Python.h"
 
-static PyObject* FastMathComputations_clip(PyObject *self, PyObject *args) 
+static PyObject* fast_math_c_api_clip(PyObject *self, PyObject *args) 
 {
   PyObject *input_list;
   PyObject *output_list;
@@ -48,22 +48,22 @@ static PyObject* FastMathComputations_clip(PyObject *self, PyObject *args)
 }
 
 /* Module method table */
-static PyMethodDef FastMathComputations_FunctionsTable[] = {
-  {"c_api_clip",  FastMathComputations_clip, METH_VARARGS, "Clipping the list values."},
+static PyMethodDef fast_math_c_api_FunctionsTable[] = {
+  {"c_api_clip",  fast_math_c_api_clip, METH_VARARGS, "Clipping the list values."},
   { NULL, NULL, 0, NULL}
 };
 
 /* Module structure */
-static struct PyModuleDef FastMathComputations_Module = {
+static struct PyModuleDef fast_math_c_api_Module = {
   PyModuleDef_HEAD_INIT,
-  "fast_math.c_api_clip",
+  "fast_math_c_api",
   "Python wrapper for custom C extension of the fast_math library.", 
   -1,
-  FastMathComputations_FunctionsTable
+  fast_math_c_api_FunctionsTable
 };
 
 /* Module initialization function */
-PyMODINIT_FUNC * PyInit_FastMathComputations(void) 
+PyMODINIT_FUNC * PyInit_fast_math_c_api(void) 
 {
-  return PyModule_Create(&FastMathComputations_Module);
+  return PyModule_Create(&fast_math_c_api_Module);
 }

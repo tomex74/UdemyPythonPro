@@ -4,30 +4,28 @@ import numpy as np
 
 import fast_math
 
-print(dir(fast_math))
-
 # Test code
-a = np.random.uniform(-2, 2, size=3)
+a = np.random.randint(-2, 2, size=3)
 print(a)
 fast_math.pure_python_clip(a, -1, 1, a)
 print(a)
 
-a = np.random.uniform(-2, 2, size=3)
+a = np.random.randint(-2, 2, size=3)
 print(a)
 fast_math.numpy_clip(a, -1, 1, a)
 print(a)
 
-a = np.random.uniform(-2, 2, size=3)
+a = np.random.randint(-2, 2, size=3)
 print(a)
 fast_math.cython_clip(a, -1, 1, a)
 print(a)
 
-a = np.random.uniform(-2, 2, size=3)
+a = np.random.randint(-2, 2, size=3)
 print(a)
 fast_math.c_api_clip(list(a), -1, 1, list(a))
 print(a)
 
-a = np.random.uniform(-2, 2, size=100)
+a = np.random.randint(-2, 2, size=100)
 
 # Timin_valueg test
 import_string = \

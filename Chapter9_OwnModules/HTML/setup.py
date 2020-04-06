@@ -1,8 +1,7 @@
 try:
-    from setuptools import setup, find_packages, Extension
+    from setuptools import setup, find_packages
 except ImportError:
-    from distutils.core import setup, find_packages, Extension
-from Cython.Build import cythonize
+    from distutils.core import setup, find_packages
 
 CLASSIFIERS = '''\
 License :: OSI Approved
@@ -21,7 +20,7 @@ DESCRIPTION = 'This is an Example Package for math calculations.'
 LICENSE = 'New BSD'
 
 MAJOR = 0
-MINOR = 3
+MINOR = 1
 MICRO = 0
 ISRELEASED = True
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
@@ -30,17 +29,11 @@ PYTHON_MIN_VERSION = '3.6'
 SCIPY_MIN_VERSION = '1.1.0'
 NUMPY_MIN_VERSION = '1.14.0'
 
-# Cython and C API Code
-CYTHON_FILES = cythonize(['./fast_math/cython_computations.pyx'])
-C_API_FILES = cythonize(Extension('fast_math_c_api',
-                                  sources=['./fast_math/c_api_computations.c']))
-EXT_MODULES = CYTHON_FILES + C_API_FILES
-
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
-    packages=['fast_math'],
-    ext_modules=EXT_MODULES,
+    #packages=['fast_math'],
+    packages=find_packages('fast_math'),
     python_requires='>={}'.format(PYTHON_MIN_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
                       'scipy>={}'.format(SCIPY_MIN_VERSION),],
