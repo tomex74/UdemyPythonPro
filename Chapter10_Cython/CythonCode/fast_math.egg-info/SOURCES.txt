@@ -1,0 +1,10 @@
+setup.py
+./fast_math/cython_computations.c
+fast_math/__init__.py
+fast_math/computations.py
+fast_math/cython_computations.c
+fast_math.egg-info/PKG-INFO
+fast_math.egg-info/SOURCES.txt
+fast_math.egg-info/dependency_links.txt
+fast_math.egg-info/requires.txt
+fast_math.egg-info/top_level.txt

@@ -1,0 +1,20 @@
+2020-03-31 17:48:29.259 | DEBUG    | __main__:main:16 - That's it, beautiful and simple logging!
+2020-03-31 17:48:29.261 | INFO     | __main__:main:17 - If you're using Python 3.6, prefer f-strings of course!
+2020-03-31 17:48:29.262 | ERROR    | __main__:main:18 - An error has been caught in function 'main', process 'MainProcess' (252), thread 'MainThread' (16328):
+Traceback (most recent call last):
+
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 21, in <module>
+    main()
+    -> <function main at 0x0000021FA711D318>
+
+> File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 18, in main
+    my_function(-1, 0, 1)
+    -> <function my_function at 0x0000021FA68B3D38>
+
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 10, in my_function
+    return 1 / (x + y + z)
+                |   |   -> 1
+                |   -> 0
+                -> -1
+
+ZeroDivisionError: division by zero

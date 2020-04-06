@@ -1,0 +1,1 @@
+activate base & python setup.py install --user
