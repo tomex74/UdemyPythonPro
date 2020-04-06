@@ -16,8 +16,7 @@ class Node:
         return DepthFirstIterator(self)
 
 class DepthFirstIterator(object):
-    '''
-    Depth-first traversal
+    '''Depth-first traversal.
     '''
     def __init__(self, start_node):
         self._node = start_node
@@ -48,16 +47,17 @@ class DepthFirstIterator(object):
             return next(self)
 
 
-# Example
 if __name__ == '__main__':
+    # Nodes
     root = Node(0)
     child1 = Node(1)
     child2 = Node(2)
+    #Tree Structure
     root.add_child(child1)
     root.add_child(child2)
     child1.add_child(Node(3))
     child1.add_child(Node(4))
     child2.add_child(Node(5))
 
-    for ch in root.depth_first():
-        print(ch)
+    for child in root.depth_first():
+        print(child)

@@ -23,12 +23,12 @@ class Vector2D:
     def __repr__(self):
         """Returns the representation of the vector as a string.
         """
-        return 'Vector2D(%r, %r)' % (self.x, self.y)
+        return 'vector.Vector2D(%r, %r)' % (self.x, self.y)
 
     def __str__(self):
         """Returns the representation of the vector as a string.
         """
-        return 'Vector2D(%r, %r)' % (self.x, self.y)
+        return '(%r, %r)' % (self.x, self.y)
 
     def __abs__(self):
         """Returns the absolute value, which is the magnitude
