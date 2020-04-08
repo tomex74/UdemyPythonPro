@@ -39,14 +39,17 @@
 ## Lists
   - ListComp
   - ListIndexing / Slicing
+  - Zipping
+  - Enumerate
 ## Dicts
+  - iteratingOverDicts
   - DictComp
 ## Strings
   - OldFormatter
   - NewFormatter
   - FStrings
 ## Tuples
-  - 
+  - UsageForTuples
 ## Sets
   - SetComp
 
@@ -72,7 +75,7 @@
   - Averager
 
 # Chapter6_ObjectOriented
-  - vector
+  - vectorClassExample
   - classMethodDate
   - staticMethodDate
   - factoryClassPizza
