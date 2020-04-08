@@ -2,3 +2,7 @@ INFO:root:Logging into file: log1.log
 INFO:root:Started
 INFO:root:Doing something
 INFO:root:Finished
+INFO:root:Logging into file: log1.log
+INFO:root:Started
+INFO:root:Doing something
+INFO:root:Finished

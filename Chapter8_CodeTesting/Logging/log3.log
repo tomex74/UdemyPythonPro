@@ -1,20 +1,60 @@
-2020-03-31 17:48:29.259 | DEBUG    | __main__:main:16 - That's it, beautiful and simple logging!
-2020-03-31 17:48:29.261 | INFO     | __main__:main:17 - If you're using Python 3.6, prefer f-strings of course!
-2020-03-31 17:48:29.262 | ERROR    | __main__:main:18 - An error has been caught in function 'main', process 'MainProcess' (252), thread 'MainThread' (16328):
+2020-04-08 11:49:45.268 | INFO     | __main__:main:18 - Start logging
+2020-04-08 11:49:45.269 | INFO     | __main__:my_function:9 - Entering my function
+2020-04-08 11:49:45.270 | ERROR    | __main__:main:19 - An error has been caught in function 'main', process 'MainProcess' (22164), thread 'MainThread' (2340):
 Traceback (most recent call last):
 
-  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 21, in <module>
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 22, in <module>
     main()
-    -> <function main at 0x0000021FA711D318>
+    -> <function main at 0x000001FC0CC28A68>
 
-> File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 18, in main
-    my_function(-1, 0, 1)
-    -> <function my_function at 0x0000021FA68B3D38>
+> File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 19, in main
+    my_function(-1.0, 0, 1)
+    -> <function my_function at 0x000001FC0C3A6C18>
 
   File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 10, in my_function
-    return 1 / (x + y + z)
-                |   |   -> 1
-                |   -> 0
-                -> -1
+    result = 1 / (x + y + z)
+                  |   |   -> 1
+                  |   -> 0
+                  -> -1.0
 
-ZeroDivisionError: division by zero
+ZeroDivisionError: float division by zero
+2020-04-08 11:49:45.990 | INFO     | __main__:main:18 - Start logging
+2020-04-08 11:49:45.991 | INFO     | __main__:my_function:9 - Entering my function
+2020-04-08 11:49:45.992 | ERROR    | __main__:main:19 - An error has been caught in function 'main', process 'MainProcess' (8880), thread 'MainThread' (16800):
+Traceback (most recent call last):
+
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 22, in <module>
+    main()
+    -> <function main at 0x000002928EDC8A68>
+
+> File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 19, in main
+    my_function(-1.0, 0, 1)
+    -> <function my_function at 0x000002928E546C18>
+
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 10, in my_function
+    result = 1 / (x + y + z)
+                  |   |   -> 1
+                  |   -> 0
+                  -> -1.0
+
+ZeroDivisionError: float division by zero
+2020-04-08 11:50:38.600 | INFO     | __main__:main:18 - Start logging
+2020-04-08 11:50:38.602 | INFO     | __main__:my_function:9 - Entering my function
+2020-04-08 11:50:38.602 | ERROR    | __main__:main:19 - An error has been caught in function 'main', process 'MainProcess' (13448), thread 'MainThread' (15464):
+Traceback (most recent call last):
+
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 22, in <module>
+    main()
+    -> <function main at 0x000001F889CB8A68>
+
+> File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 19, in main
+    my_function(-1.0, 0, 1)
+    -> <function my_function at 0x000001F889456C18>
+
+  File "c:/Users/Jan/Dropbox/_Programmieren/UdemyPythonKurs/Chapter8_CodeTesting/Logging/extended_logging.py", line 10, in my_function
+    result = 1 / (x + y + z)
+                  |   |   -> 1
+                  |   -> 0
+                  -> -1.0
+
+ZeroDivisionError: float division by zero

@@ -1,1 +1,0 @@
-# When/how to use 'any' or the 'all' funtion?
