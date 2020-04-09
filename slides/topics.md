@@ -10,7 +10,6 @@
   - IPythonShell
   - JupyterNotebook
   - JupyterLab
-  - GoogleColab
   - VS Code (IDE example)
 
 # Chapter3_BasicFeatures
@@ -30,10 +29,7 @@
   - variableMutability
   - variableReassignment
   - localAndGlobalScope
-## Modules
-  - main
-  - dir
-  - localsAndGlobals
+  - mainAndDir
 
 # Chapter4_Iterables
 ## Lists
@@ -41,17 +37,18 @@
   - ListIndexing / Slicing
   - Zipping
   - Enumerate
+## Tuples
+  - UsageForTuples
 ## Dicts
   - iteratingOverDicts
   - DictComp
+## Sets
+  - SetComp
+  - SetOperations
 ## Strings
   - OldFormatter
   - NewFormatter
   - FStrings
-## Tuples
-  - UsageForTuples
-## Sets
-  - SetComp
 
 # Chapter5_Functions
 ## Functions
@@ -69,10 +66,9 @@
   - Filter
   - Reduce 
 ## Decorators
-  - Counter
-  - Timer
-## Coroutines
-  - Averager
+  - Counter Decorator
+  - Timer Decorator
+  - Averager Coroutine
 
 # Chapter6_ObjectOriented
   - vectorClassExample
@@ -80,15 +76,12 @@
   - staticMethodDate
   - factoryClassPizza
   - getterSetterPerson
-  - nodeIterator
   - inheritance
 
 # Chapter7_CodingGuidelines
-## PEP8
   - website
   - flake8
   - pylint
-## Docstring
   - GoogleStyle
   - NumpyStyle
   - TypeAnnotations
@@ -97,8 +90,8 @@
 ## Debugging
   - Debugging in VS Code
 ## Logging
-  - Logging plain
   - Logging decorator
+  - Logging plain
   - External logging package
 ## UnitTest
   - UnitTest
@@ -112,9 +105,7 @@
   - Standard timeit
 
 # Chapter9_Packages
-## Packaging
   - Setuptools (est. 2 Videos)
-## HTML
   - Sphinx (est. 2 Videos)
 
 # Chapter10_C_Python
