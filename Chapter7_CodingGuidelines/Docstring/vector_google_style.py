@@ -1,121 +1,93 @@
+"""Own implementation of a 2D vector class.
+"""
+import numbers
 from math import sqrt
-from numbers import Number
+from functools import total_ordering
 
+@total_ordering 
 class Vector2D:
+    """Vector2D class to perform simple vector operations.
+    """
     def __init__(self, x=0, y=0):
-        """Constrcutor of the vector class.
-
+        """Create a vector with the given x and y values.
+        
         Args:
-            x (scalar): The value of the x-coordinate
-            x (scalar): The value of the y-coordinate
+            x (number): x-Coordinate. Defaults to 0.
+            y (number): y-Coordinate. Defaults to 0.
+        
+        Raises:
+            TypeError: If x or y is not a number.
         """
-        self.x = x
-        self.y = y
+        if isinstance(x, numbers.Real) and isinstance(y, numbers.Real):
+            self.x = x
+            self.y = y
+        else:
+            raise TypeError('You must pass in int/float values for x and y!')
 
-    def __call__(self):   
-        """Returns the representation of the vector as a string.
+    def __call__(self):
+        """Callable function for a vector instance.
+        
+        Returns:
+            str: Representation of the vector instance.
         """
-        self.__repr__()
+        print("Calling the __call__ function!")
+        return self.__repr__()
 
     def __repr__(self):
-        """Returns the representation of the vector as a string.
-        """
-        return 'vector.Vector2D(%r, %r)' % (self.x, self.y)
+        return 'vector.Vector2D({}, {})'.format(self.x, self.y)
 
     def __str__(self):
-        """Returns the representation of the vector as a string.
-        """
-        return '(%r, %r)' % (self.x, self.y)
-
-    def __abs__(self):
-        """Returns the absolute value, which is the magnitude
-        of the vector
-        
-        Returns:
-            float: The absolute value of the vector.
-        """
-        return sqrt(pow(self.x) + pow(self.y))
+        return '({}, {})'.format(self.x, self.y)
 
     def __bool__(self):
-        """Returns if any value of the vector is not zero.
-        
-        Returns
-            bool: If any value is not equal to zero.
-        """
         return bool(abs(self))
 
-    def __eq__(self, other):
-        """Checks wether the vector is equal to the other vector, by
-        comparing all values.
-        
-        Args:
-            other (Vector2D): Vector that is left of the equallity operator.
-        
-        Returns:
-            bool: If both vectors have the same values.
-        """
-        if self.x == other.x and self.y == other.y:
-            return True
-        else:
-            return False
+    def __abs__(self):
+        return sqrt(pow(self.x, 2) + pow(self.y, 2))
 
-    def __add__(self, other):
-        """[summary]
-        
-        Args:
-            other ([type]): [description]
-        
-        Returns:
-            [type]: [description]
-        """
-        x = self.x + other.x
-        y = self.y + other.y
+    def check_vector_types(self, vector2):
+        if not isinstance(self, Vector2D) or not isinstance(vector2, Vector2D):
+            raise TypeError('You have to pass in two instances of the vector class!')
+
+    def __eq__(self, other_vector):
+        self.check_vector_types(other_vector)
+        is_equal = False
+        if self.x == other_vector.x and self.y == other_vector.y:
+            is_equal = True
+        return is_equal
+
+    def __lt__(self, other_vector):
+        self.check_vector_types(other_vector)
+        is_less_than = False
+        if abs(self) < abs(other_vector):
+            is_less_than = True
+        return is_less_than
+
+    def __add__(self, other_vector):
+        self.check_vector_types(other_vector)
+        x = self.x + other_vector.x
+        y = self.y + other_vector.y
         return Vector2D(x, y)
 
-    def __sub__(self, other):
-        """[summary]
-        
-        Args:
-            other ([type]): [description]
-        
-        Returns:
-            [type]: [description]
-        """
-        x = self.x - other.x
-        y = self.y - other.y
+    def __sub__(self, other_vector):
+        self.check_vector_types(other_vector)
+        x = self.x - other_vector.x
+        y = self.y - other_vector.y
         return Vector2D(x, y)
 
     def __mul__(self, other):
-        """[summary]
-        
-        Args:
-            other ([type]): [description]
-        
-        Raises:
-            TypeError: [description]
-        
-        Returns:
-            [type]: [description]
-        """
         if isinstance(other, Vector2D):
             return self.x * other.x + self.y * other.y
-        elif isinstance(other, Number):
+        elif isinstance(other, numbers.Real):
             return Vector2D(self.x * other, self.y * other)
         else:
-            raise TypeError('Passed in argument must be from type Vector2D or Number.')
+            raise TypeError('You must pass in a vector instance or an int/float number!')
 
-    def __truediv__(self, scalar):
-        """[summary]
-        
-        Args:
-            scalar ([type]): [description]
-        
-        Raises:
-            ValueError: [description]
-        
-        Returns:
-            [type]: [description]
-        """
-        if scalar == 0.0:
-            raise ValueError('Passed in a scalar value of zero.')
-        return Vector2D(self.x / scalar, self.y / scalar)
+    def __truediv__(self, other):
+        if isinstance(other, numbers.Real):
+            if other != 0.0:
+                return Vector2D(self.x / other, self.y / other)
+            else:
+                raise ValueError('You cannot divide by zero!')
+        else:
+            raise TypeError('You must pass in an int/float value!')
