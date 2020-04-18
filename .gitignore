@@ -1,1 +1,7 @@
 .mypy_cache/*
+/htmlcov/*
+.coverage
+*.js
+*.html
+*.png
+*.css
