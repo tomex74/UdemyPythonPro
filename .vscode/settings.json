@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Jan\\.conda\\envs\\pyUdemy\\python.exe"
+    "python.pythonPath": "C:\\Users\\Jan\\.conda\\envs\\pyUdemy\\python.exe",
+    "python.linting.pylintEnabled": true
 }

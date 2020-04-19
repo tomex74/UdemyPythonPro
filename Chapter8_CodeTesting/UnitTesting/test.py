@@ -41,8 +41,5 @@ class TestStringMethods(unittest.TestCase):
         expected_result2 = 0.0
         self.assertEqual(result2, expected_result2)
 
-def main():
-    unittest.main()
-
 if __name__ == "__main__":
-    main()
+    unittest.main()
