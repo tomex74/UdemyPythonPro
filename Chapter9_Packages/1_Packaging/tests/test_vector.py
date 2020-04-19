@@ -1,8 +1,8 @@
 """Test code.
 """
 import unittest
-
-from vector import Vector2D
+ 
+from fastvector import Vector2D
 
 class VectorTests(unittest.TestCase):
     def setUp(self):

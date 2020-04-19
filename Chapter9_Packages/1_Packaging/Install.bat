@@ -1,1 +1,1 @@
-activate base & python setup.py install --user
+activate pyUdemy & python setup.py install --user --force

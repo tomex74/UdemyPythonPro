@@ -1,4 +1,8 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+
+def readme():
+    with open('README.md') as f:
+        return f.read()
 
 CLASSIFIERS = '''\
 License :: OSI Approved
@@ -14,7 +18,7 @@ DISTNAME = 'fastvector'
 AUTHOR = 'Jan Schaffranek'
 AUTHOR_EMAIL = 'jan.schaffranek@rub.com'
 DESCRIPTION = 'This is an Example Package for math calculations.'
-LICENSE = 'New BSD'
+LICENSE = 'MIT'
 
 MAJOR = 0
 MINOR = 1
@@ -29,7 +33,8 @@ NUMPY_MIN_VERSION = '1.14.0'
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
-    packages=find_packages('fastvector'),
+    ong_description=readme(),
+    packages=['fastvector'],
     python_requires='>={}'.format(PYTHON_MIN_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
                       'scipy>={}'.format(SCIPY_MIN_VERSION),],
