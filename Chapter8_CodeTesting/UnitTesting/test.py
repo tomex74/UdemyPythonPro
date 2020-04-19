@@ -4,7 +4,7 @@ import unittest
 
 from vector import Vector2D
 
-class TestStringMethods(unittest.TestCase):
+class VectorTests(unittest.TestCase):
     def setUp(self):
         self.v1 = Vector2D(0, 0)
         self.v2 = Vector2D(-1, 1)
