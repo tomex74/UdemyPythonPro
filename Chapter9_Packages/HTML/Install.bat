@@ -1,1 +1,1 @@
-activate base & python setup.py install --user & rmdir/S /Q build & rmdir/S /Q dist & rmdir/S /Q fast_vector.egg-info
+activate base & python setup.py install --user & rmdir/S /Q build & rmdir/S /Q dist & rmdir/S /Q fastvector.egg-info

@@ -3,12 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "fast_vector.cython_computations",
+        "name": "fastvector.cython_computations",
         "sources": [
-            "./fast_vector/cython_computations.pyx"
+            "./fastvector/cython_computations.pyx"
         ]
     },
-    "module_name": "fast_vector.cython_computations"
+    "module_name": "fastvector.cython_computations"
 }
 END: Cython Metadata */
 
@@ -818,7 +818,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "fast_vector\\cython_computations.pyx",
+  "fastvector\\cython_computations.pyx",
   "stringsource",
 };
 /* MemviewSliceStruct.proto */
@@ -1683,7 +1683,7 @@ static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memo
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'fast_vector.cython_computations' */
+/* Module declarations from 'fastvector.cython_computations' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1730,11 +1730,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_long = { "long", NULL, sizeof(long), { 0 }, 0, IS_UNSIGNED(long) ? 'U' : 'I', IS_UNSIGNED(long), 0 };
-#define __Pyx_MODULE_NAME "fast_vector.cython_computations"
+#define __Pyx_MODULE_NAME "fastvector.cython_computations"
 extern int __pyx_module_is_main_fast_math__cython_computations;
 int __pyx_module_is_main_fast_math__cython_computations = 0;
 
-/* Implementation of 'fast_vector.cython_computations' */
+/* Implementation of 'fastvector.cython_computations' */
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_MemoryError;
@@ -2005,7 +2005,7 @@ static PyObject *__pyx_tuple__26;
 static PyObject *__pyx_codeobj__27;
 /* Late includes */
 
-/* "fast_vector/cython_computations.pyx":5
+/* "fastvector/cython_computations.pyx":5
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):             # <<<<<<<<<<<<<<
@@ -2031,7 +2031,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   Py_ssize_t __pyx_t_11;
   __Pyx_RefNannySetupContext("cython_clip", 0);
 
-  /* "fast_vector/cython_computations.pyx":6
+  /* "fastvector/cython_computations.pyx":6
  * @cython.wraparound(False)
  * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:             # <<<<<<<<<<<<<<
@@ -2041,7 +2041,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   __pyx_t_1 = ((__pyx_v_min_value > __pyx_v_max_value) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "fast_vector/cython_computations.pyx":7
+    /* "fastvector/cython_computations.pyx":7
  * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")             # <<<<<<<<<<<<<<
@@ -2054,7 +2054,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 7, __pyx_L1_error)
 
-    /* "fast_vector/cython_computations.pyx":6
+    /* "fastvector/cython_computations.pyx":6
  * @cython.wraparound(False)
  * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:             # <<<<<<<<<<<<<<
@@ -2063,7 +2063,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
  */
   }
 
-  /* "fast_vector/cython_computations.pyx":8
+  /* "fastvector/cython_computations.pyx":8
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")
  *     if a.shape[0] != out.shape[0]:             # <<<<<<<<<<<<<<
@@ -2073,7 +2073,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   __pyx_t_1 = (((__pyx_v_a.shape[0]) != (__pyx_v_out.shape[0])) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "fast_vector/cython_computations.pyx":9
+    /* "fastvector/cython_computations.pyx":9
  *         raise ValueError("min_value must be <= max_value")
  *     if a.shape[0] != out.shape[0]:
  *         raise ValueError("input and output arrays must be the same size")             # <<<<<<<<<<<<<<
@@ -2086,7 +2086,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __PYX_ERR(0, 9, __pyx_L1_error)
 
-    /* "fast_vector/cython_computations.pyx":8
+    /* "fastvector/cython_computations.pyx":8
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")
  *     if a.shape[0] != out.shape[0]:             # <<<<<<<<<<<<<<
@@ -2095,7 +2095,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
  */
   }
 
-  /* "fast_vector/cython_computations.pyx":10
+  /* "fastvector/cython_computations.pyx":10
  *     if a.shape[0] != out.shape[0]:
  *         raise ValueError("input and output arrays must be the same size")
  *     for i in range(a.shape[0]):             # <<<<<<<<<<<<<<
@@ -2106,7 +2106,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_i = __pyx_t_5;
 
-    /* "fast_vector/cython_computations.pyx":11
+    /* "fastvector/cython_computations.pyx":11
  *         raise ValueError("input and output arrays must be the same size")
  *     for i in range(a.shape[0]):
  *         out[i] = (a[i] if a[i] < max_value else max_value) if a[i] > min_value else min_value             # <<<<<<<<<<<<<<
@@ -2128,7 +2128,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
     *((long *) ( /* dim=0 */ (__pyx_v_out.data + __pyx_t_11 * __pyx_v_out.strides[0]) )) = __pyx_t_6;
   }
 
-  /* "fast_vector/cython_computations.pyx":5
+  /* "fastvector/cython_computations.pyx":5
  * @cython.boundscheck(False)
  * @cython.wraparound(False)
  * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):             # <<<<<<<<<<<<<<
@@ -2141,7 +2141,7 @@ static PyObject *__pyx_f_9fast_math_19cython_computations_cython_clip(__Pyx_memv
   goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("fast_vector.cython_computations.cython_clip", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fastvector.cython_computations.cython_clip", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2221,7 +2221,7 @@ static PyObject *__pyx_pw_9fast_math_19cython_computations_1cython_clip(PyObject
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("cython_clip", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 5, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fast_vector.cython_computations.cython_clip", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fastvector.cython_computations.cython_clip", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
@@ -2249,7 +2249,7 @@ static PyObject *__pyx_pf_9fast_math_19cython_computations_cython_clip(CYTHON_UN
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fast_vector.cython_computations.cython_clip", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("fastvector.cython_computations.cython_clip", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_a, 1);
@@ -15194,7 +15194,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fast_vector.cython_computations.array", /*tp_name*/
+  "fastvector.cython_computations.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -15305,7 +15305,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fast_vector.cython_computations.Enum", /*tp_name*/
+  "fastvector.cython_computations.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -15558,7 +15558,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fast_vector.cython_computations.memoryview", /*tp_name*/
+  "fastvector.cython_computations.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -15688,7 +15688,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fast_vector.cython_computations._memoryviewslice", /*tp_name*/
+  "fastvector.cython_computations._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -15914,7 +15914,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "fast_vector/cython_computations.pyx":7
+  /* "fastvector/cython_computations.pyx":7
  * cpdef cython_clip(long[:] a, long min_value, long max_value, long[:] out):
  *     if min_value > max_value:
  *         raise ValueError("min_value must be <= max_value")             # <<<<<<<<<<<<<<
@@ -15925,7 +15925,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "fast_vector/cython_computations.pyx":9
+  /* "fastvector/cython_computations.pyx":9
  *         raise ValueError("min_value must be <= max_value")
  *     if a.shape[0] != out.shape[0]:
  *         raise ValueError("input and output arrays must be the same size")             # <<<<<<<<<<<<<<
@@ -16509,8 +16509,8 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "fast_vector.cython_computations")) {
-      if (unlikely(PyDict_SetItemString(modules, "fast_vector.cython_computations", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "fastvector.cython_computations")) {
+      if (unlikely(PyDict_SetItemString(modules, "fastvector.cython_computations", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -16531,7 +16531,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "fast_vector/cython_computations.pyx":1
+  /* "fastvector/cython_computations.pyx":1
  * cimport cython             # <<<<<<<<<<<<<<
  * 
  * @cython.boundscheck(False)
@@ -16701,11 +16701,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_1);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init fast_vector.cython_computations", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init fastvector.cython_computations", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init fast_vector.cython_computations");
+    PyErr_SetString(PyExc_ImportError, "init fastvector.cython_computations");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

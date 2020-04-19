@@ -7,7 +7,7 @@ Submodules
 fast\_math.computations module
 ------------------------------
 
-.. automodule:: fast_vector.computations
+.. automodule:: fastvector.computations
    :members:
    :undoc-members:
    :show-inheritance:
@@ -16,7 +16,7 @@ fast\_math.computations module
 Module contents
 ---------------
 
-.. automodule:: fast_vector
+.. automodule:: fastvector
    :members:
    :undoc-members:
    :show-inheritance:

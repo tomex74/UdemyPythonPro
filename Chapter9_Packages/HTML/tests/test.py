@@ -1,6 +1,6 @@
-import fast_vector
+import fastvector
 
-print(dir(fast_vector))
+print(dir(fastvector))
 
-fast_vector.foo()
-fast_vector.bar()
+fastvector.foo()
+fastvector.bar()

@@ -1,7 +1,7 @@
-fast_vector
+fastvector
 =========
 
 .. toctree::
    :maxdepth: 4
 
-   fast_vector
+   fastvector

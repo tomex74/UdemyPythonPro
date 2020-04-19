@@ -14,7 +14,7 @@ Operating System :: Unix
 Operating System :: MacOS
 '''
 
-DISTNAME = 'fast_vector'
+DISTNAME = 'fastvector'
 AUTHOR = 'Jan Schaffranek'
 AUTHOR_EMAIL = 'jan.schaffranek@rub.com'
 DESCRIPTION = 'This is an Example Package for math calculations.'
@@ -31,15 +31,15 @@ SCIPY_MIN_VERSION = '1.1.0'
 NUMPY_MIN_VERSION = '1.14.0'
 
 # Cython and C API Code
-CYTHON_FILES = cythonize(['./fast_vector/cython_computations.pyx'])
+CYTHON_FILES = cythonize(['./fastvector/cython_computations.pyx'])
 C_API_FILES = cythonize(Extension('fast_math_c_api',
-                                  sources=['./fast_vector/c_api_computations.c']))
+                                  sources=['./fastvector/c_api_computations.c']))
 EXT_MODULES = CYTHON_FILES + C_API_FILES
 
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
-    packages=['fast_vector'],
+    packages=['fastvector'],
     ext_modules=EXT_MODULES,
     python_requires='>={}'.format(PYTHON_MIN_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),

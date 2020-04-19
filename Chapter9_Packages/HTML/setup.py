@@ -13,7 +13,7 @@ Operating System :: Unix
 Operating System :: MacOS
 '''
 
-DISTNAME = 'fast_vector'
+DISTNAME = 'fastvector'
 AUTHOR = 'Jan Schaffranek'
 AUTHOR_EMAIL = 'jan.schaffranek@rub.com'
 DESCRIPTION = 'This is an Example Package for math calculations.'
@@ -32,8 +32,8 @@ NUMPY_MIN_VERSION = '1.14.0'
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
-    #packages=['fast_vector'],
-    packages=find_packages('fast_vector'),
+    #packages=['fastvector'],
+    packages=find_packages('fastvector'),
     python_requires='>={}'.format(PYTHON_MIN_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
                       'scipy>={}'.format(SCIPY_MIN_VERSION),],
