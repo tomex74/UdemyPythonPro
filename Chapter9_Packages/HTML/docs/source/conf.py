@@ -12,7 +12,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../fast_math/'))
+sys.path.insert(0, os.path.abspath('../../fast_vector/'))
 
 # -- Project information -----------------------------------------------------
 

@@ -57,7 +57,7 @@ static PyMethodDef fast_math_c_api_FunctionsTable[] = {
 static struct PyModuleDef fast_math_c_api_Module = {
   PyModuleDef_HEAD_INIT,
   "fast_math_c_api",
-  "Python wrapper for custom C extension of the fast_math library.", 
+  "Python wrapper for custom C extension of the fast_vector library.", 
   -1,
   fast_math_c_api_FunctionsTable
 };

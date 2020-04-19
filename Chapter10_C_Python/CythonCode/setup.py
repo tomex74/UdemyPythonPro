@@ -6,7 +6,7 @@ from Cython.Build import cythonize
 
 CLASSIFIERS = '''\
 License :: OSI Approved
-Programming Language :: Python :: 3.6 :: or higher
+Programming Language :: Python :: 3.7 :: or higher
 Topic :: Software Development
 Operating System :: Microsoft :: Windows
 Operating System :: POSIX
@@ -14,7 +14,7 @@ Operating System :: Unix
 Operating System :: MacOS
 '''
 
-DISTNAME = 'fast_math'
+DISTNAME = 'fast_vector'
 AUTHOR = 'Jan Schaffranek'
 AUTHOR_EMAIL = 'jan.schaffranek@rub.com'
 DESCRIPTION = 'This is an Example Package for math calculations.'
@@ -26,15 +26,15 @@ MICRO = 0
 ISRELEASED = True
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
-PYTHON_MIN_VERSION = '3.6'
+PYTHON_MIN_VERSION = '3.7'
 SCIPY_MIN_VERSION = '1.1.0'
 NUMPY_MIN_VERSION = '1.14.0'
 
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
-    packages=['fast_math'],
-    ext_modules=cythonize("./fast_math/cython_computations.pyx"),
+    packages=['fast_vector'],
+    ext_modules=cythonize("./fast_vector/cython_computations.pyx"),
     python_requires='>={}'.format(PYTHON_MIN_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
                       'scipy>={}'.format(SCIPY_MIN_VERSION),],
