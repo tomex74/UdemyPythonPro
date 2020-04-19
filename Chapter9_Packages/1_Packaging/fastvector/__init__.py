@@ -1,3 +1,3 @@
-from .vector import *
+from .vector import Vector2D
 
-__all__ = vector.__all__
+__all__ = Vector2D
