@@ -33,7 +33,7 @@ NUMPY_MIN_VERSION = '1.14.0'
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
-    packages=['fastvector'],
+    packages=['fastvector', 'fastvector.test'],
     ext_modules=cythonize("./fastvector/cython_computations.pyx"),
     python_requires='>={}'.format(PYTHON_MIN_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),

@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.abspath('../../fastvector/'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'FastMath'
+project = 'FastVector'
 copyright = '2020, Jan Schaffranek'
 author = 'Jan Schaffranek'
 

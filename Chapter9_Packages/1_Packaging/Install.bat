@@ -1,1 +1,0 @@
-activate pyUdemy & python setup.py install --user --force

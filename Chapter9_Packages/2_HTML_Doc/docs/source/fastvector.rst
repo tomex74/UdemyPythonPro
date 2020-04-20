@@ -1,16 +1,17 @@
-fast\_math package
+fastvector package
 ==================
 
 Submodules
 ----------
 
-fast\_math.computations module
-------------------------------
+fastvector.vector module
+------------------------
 
-.. automodule:: fastvector.computations
+.. automodule:: fastvector.vector
    :members:
    :undoc-members:
    :show-inheritance:
+   :special-members:
 
 
 Module contents
@@ -20,3 +21,4 @@ Module contents
    :members:
    :undoc-members:
    :show-inheritance:
+   :special-members:

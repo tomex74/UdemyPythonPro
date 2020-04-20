@@ -1,7 +1,8 @@
-Welcome to FastMath's documentation!
+Welcome to FastVector's documentation!
 ====================================
 
-TEXT
+Hello this is a simple package for 2D vectors!
+You can do simple vector operations like: addition, subtraction, etc.
 
 Indices and tables
 ==================
