@@ -29,17 +29,20 @@ def main():
     print_sequence_values(l)
     d = {'a': 1, 'b': 2}
     print_sequence_values(d)
+    t = (1, 2, 3)
+    print_sequence_values(t)
 
     users = {'1234': 'jan'}
     u1 = '1234'
     print_user_id1(users, u1)
-    u2 = 1234
-    print_user_id1(users, u2)
-    u3 = []
-    print_user_id1(users, u3)
+    # u2 = 1234
+    # print_user_id1(users, u2)
+    # u3 = []
+    # print_user_id1(users, u3)
 
-    v = [[1, 1], [2, 2]]
-    inner_product(v)
+    v = [[1, 1], 
+         [2, 2]]
+    print(inner_product(v))
 
 if __name__ == '__main__':
     main()
