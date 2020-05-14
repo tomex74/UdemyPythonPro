@@ -1,9 +1,7 @@
 import math
 import time
 
-from multiprocessing import Process
-
-NUM_PROCESSES = 4
+NUM_THREADS = 4
 
 def calc(upper_bound=7_000_000):
     res = 0
@@ -14,18 +12,10 @@ def calc(upper_bound=7_000_000):
     print(res)
 
 def main():
-    processes = []
-
     start_time = time.perf_counter()
 
-    for _ in range(NUM_PROCESSES):
-        processes.append(Process(target=calc, args=[7_000_000]))
-
-    for process in processes:
-        process.start()
-
-    for process in processes:
-        process.join()
+    for _ in range(NUM_THREADS):
+        calc(7_000_000)
 
     end_time = time.perf_counter()
     print("took: {} s".format(end_time - start_time))
