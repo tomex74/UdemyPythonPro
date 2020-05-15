@@ -5,7 +5,7 @@ from threading import Thread
 
 NUM_THREADS = 2
 
-def calc(upper_bound=7_000_000):
+def calc(upper_bound=8_000_000):
     res = 0
 
     for i in range(0, upper_bound):
@@ -19,7 +19,7 @@ def main():
     start_time = time.perf_counter()
 
     for _ in range(NUM_THREADS):
-        threads.append(Thread(target=calc, args=[7_000_000]))
+        threads.append(Thread(target=calc, args=[8_000_000]))
 
     for thread in threads:
         thread.start()

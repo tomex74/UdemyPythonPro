@@ -5,7 +5,7 @@ from multiprocessing import Process
 
 NUM_PROCESSES = 4
 
-def calc(upper_bound=7_000_000):
+def calc(upper_bound=8_000_000):
     res = 0
 
     for i in range(0, upper_bound):
@@ -19,7 +19,7 @@ def main():
     start_time = time.perf_counter()
 
     for _ in range(NUM_PROCESSES):
-        processes.append(Process(target=calc, args=[7_000_000]))
+        processes.append(Process(target=calc, args=[8_000_000]))
 
     for process in processes:
         process.start()

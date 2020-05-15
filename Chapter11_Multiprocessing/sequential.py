@@ -3,7 +3,7 @@ import time
 
 NUM_THREADS = 4
 
-def calc(upper_bound=7_000_000):
+def calc(upper_bound=8_000_000):
     res = 0
 
     for i in range(0, upper_bound):
@@ -15,7 +15,7 @@ def main():
     start_time = time.perf_counter()
 
     for _ in range(NUM_THREADS):
-        calc(7_000_000)
+        calc(8_000_000)
 
     end_time = time.perf_counter()
     print("took: {} s".format(end_time - start_time))
