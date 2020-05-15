@@ -1,25 +1,22 @@
-import math
 import time
+import math
 
 from threading import Thread
 
-NUM_THREADS = 2
+NUM_THREADS = 4
 
-def calc(upper_bound=8_000_000):
+def calc(num_elements):
     res = 0
-
-    for i in range(0, upper_bound):
+    for i in range(num_elements):
         res += math.sqrt(i)
-
     print(res)
 
 def main():
     threads = []
-
-    start_time = time.perf_counter()
-
     for _ in range(NUM_THREADS):
         threads.append(Thread(target=calc, args=[8_000_000]))
+
+    start_time = time.perf_counter()
 
     for thread in threads:
         thread.start()
@@ -28,7 +25,7 @@ def main():
         thread.join()
 
     end_time = time.perf_counter()
-    print("took: {} s".format(end_time - start_time))
+    print("Took: {} s".format(end_time - start_time))
 
 if __name__ == "__main__":
     main()

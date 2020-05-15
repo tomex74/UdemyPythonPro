@@ -1,17 +1,15 @@
-import math
 import time
+import math
 import itertools
 
 from multiprocessing import Pool
 
 NUM_PROCESSES = 4
 
-def calc(upper_bound=8_000_000):
+def calc(num_elements):
     res = 0
-
-    for i in range(0, upper_bound):
+    for i in range(num_elements):
         res += math.sqrt(i)
-
     print(res)
 
 def main():
@@ -21,7 +19,7 @@ def main():
         pool.map(calc, itertools.repeat(8_000_000, NUM_PROCESSES))
 
     end_time = time.perf_counter()
-    print("took: {} s".format(end_time - start_time))
+    print("Took: {} s".format(end_time - start_time))
 
 if __name__ == "__main__":
     main()

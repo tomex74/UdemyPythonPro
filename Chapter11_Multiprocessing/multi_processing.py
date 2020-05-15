@@ -1,25 +1,23 @@
-import math
 import time
+import math
 
 from multiprocessing import Process
 
 NUM_PROCESSES = 4
 
-def calc(upper_bound=8_000_000):
+def calc(num_elements):
     res = 0
-
-    for i in range(0, upper_bound):
+    for i in range(num_elements):
         res += math.sqrt(i)
-
     print(res)
 
 def main():
     processes = []
 
-    start_time = time.perf_counter()
-
     for _ in range(NUM_PROCESSES):
         processes.append(Process(target=calc, args=[8_000_000]))
+
+    start_time = time.perf_counter()
 
     for process in processes:
         process.start()
@@ -28,7 +26,7 @@ def main():
         process.join()
 
     end_time = time.perf_counter()
-    print("took: {} s".format(end_time - start_time))
+    print("Took: {} s".format(end_time - start_time))
 
 if __name__ == "__main__":
     main()
