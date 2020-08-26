@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Jan\\.conda\\envs\\pyUdemy\\python.exe",
+    "python.pythonPath": "C:\\Users\\Jan\\anaconda3\\envs\\pyUdemy\\python.exe",
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": true,
