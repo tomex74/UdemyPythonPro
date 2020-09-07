@@ -142,17 +142,6 @@ disable=print-statement,
         invalid-name,
         redefined-outer-name,
         missing-docstring,
-        unused-variable,
-        no-member,
-        consider,
-        unexpected-keyword-arg,
-        no-value-for-parameter,
-        unused-wildcard-import,
-        wildcard-import,
-        wrong-import-position,
-        not-callable,
-        attribute-defined-outside-init,
-        bare-except,
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

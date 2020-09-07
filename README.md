@@ -1,4 +1,4 @@
-# C Komplettkurs: Praxisnahe Programmierung für C Einsteiger
+# Fortgeschrittene Python Programmierung
 
 Dies ist der Code zu meinem Udemy Kurs:
-*C Komplettkurs: Praxisnahe Programmierung für C Einsteiger* von Jan Schaffranek.
+*Fortgeschrittene Python Programmierung* von Jan Schaffranek.
