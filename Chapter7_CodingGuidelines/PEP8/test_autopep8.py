@@ -2,14 +2,17 @@ import numbers
 from math import sqrt
 from functools import total_ordering
 
+
 @total_ordering
 class Vector2D:
     def __init__(self, x=0, y=0):
-        if isinstance(x, numbers.Real) and isinstance(y, numbers.Real):  
+        if isinstance(x,
+                      numbers.Real) and isinstance(y, numbers.Real):
             self.x = x
             self.y = y
         else:
-            raise TypeError('You must pass in int/float values for x and y!')
+            raise TypeError(
+                'You must pass in int/float values for x and y!')
 
     def __call__(self):
         print("Calling the __call__ function!")
@@ -44,7 +47,7 @@ class Vector2D:
             return True
         else:
             return False
-        
+
     def __add__(self, other_vector):
         self.check_vector_types(other_vector)
         x = self.x + other_vector.x
