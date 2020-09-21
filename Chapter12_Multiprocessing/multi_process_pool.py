@@ -1,8 +1,8 @@
-import time
-import math
 import itertools
-
+import math
+import time
 from multiprocessing import Pool
+
 
 NUM_PROCESSES = 4
 

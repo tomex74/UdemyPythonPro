@@ -1,10 +1,10 @@
 """Own implementation of a 2D vector class."""
 import numbers
-from math import sqrt
 from functools import total_ordering
+from math import sqrt
 
 
-@total_ordering 
+@total_ordering
 class Vector2D:
     """Vector2D class to perform simple vector operations."""
 
@@ -31,7 +31,7 @@ class Vector2D:
 
     def __call__(self):
         """Callable for the vector instance to return its representation.
-  
+
         Returns
         -------
         str
@@ -42,7 +42,7 @@ class Vector2D:
 
     def __repr__(self):
         """Returns the vector instance representation.
- 
+
         Returns
         -------
         str
@@ -52,7 +52,7 @@ class Vector2D:
 
     def __str__(self):
         """Returns the vector instance as a string.
-  
+
         Returns
         -------
         str
@@ -62,7 +62,7 @@ class Vector2D:
 
     def __bool__(self):
         """Returns the truth value of the vector instance.
- 
+
         Returns
         -------
         bool

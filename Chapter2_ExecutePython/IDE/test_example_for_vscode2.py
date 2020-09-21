@@ -3,6 +3,7 @@ def f(a):
 
 # Lists
 
+
 #       0   1  2  3  4  5
 noten = [1, 1, 3, 4, 2, 9]
 
@@ -40,6 +41,7 @@ print(my_list2_comp2)
 
 # Numpy
 import numpy as np
+
 
 m = np.array([1, 0, 0, 1])
 print(m.shape)

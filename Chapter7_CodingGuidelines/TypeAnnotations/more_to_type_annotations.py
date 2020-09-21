@@ -1,6 +1,13 @@
 from __future__ import annotations
 
-from typing import Dict, List, Tuple, Iterable, Union, NewType, TypeVar
+from typing import Dict
+from typing import Iterable
+from typing import List
+from typing import NewType
+from typing import Tuple
+from typing import TypeVar
+from typing import Union
+
 
 AllowedContainers = Union[Dict, List]
 
@@ -11,19 +18,24 @@ UserId_TV = TypeVar('UserId_TV', str, int)
 T = TypeVar('T', int, float, complex)
 Vec = Iterable[Tuple[T, T]]
 
+
 def print_sequence_values(sequence: AllowedContainers):
     for val in sequence:
         print(val)
 
+
 def print_user_id1(users: Dict, user_id: UserId_NT) -> Name:
     return users[user_id] # users.get(user_id)
+
 
 def print_user_id2(users: Dict, user_id: UserId_TV) -> Name:
     return users[user_id]
 
+
 def inner_product(v: Vec[T]) -> T:
-    return sum(x*y for x, y in v)
-        
+    return sum(x * y for x, y in v)
+
+
 def main():
     l = [1, 2, 3]
     print_sequence_values(l)
@@ -40,9 +52,10 @@ def main():
     # u3 = []
     # print_user_id1(users, u3)
 
-    v = [[1, 1], 
+    v = [[1, 1],
          [2, 2]]
     print(inner_product(v))
+
 
 if __name__ == '__main__':
     main()

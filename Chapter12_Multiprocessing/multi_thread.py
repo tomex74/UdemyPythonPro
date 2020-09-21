@@ -1,7 +1,7 @@
-import time
 import math
-
+import time
 from threading import Thread
+
 
 NUM_THREADS = 4
 

@@ -1,5 +1,6 @@
-import sys
 import argparse
+import sys
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -14,6 +15,7 @@ def main():
     print(a, type(a))
     print(b, type(b))
     print(c, type(c))
+
 
 if __name__ == "__main__":
     main()

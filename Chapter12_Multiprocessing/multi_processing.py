@@ -1,7 +1,7 @@
-import time
 import math
-
+import time
 from multiprocessing import Process
+
 
 NUM_PROCESSES = 4
 

@@ -1,6 +1,6 @@
 import numbers
-from math import sqrt
 from functools import total_ordering
+from math import sqrt
 
 
 @total_ordering

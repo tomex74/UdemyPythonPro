@@ -1,4 +1,6 @@
-from my_lib import POWER_OF, my_function
+from my_lib import POWER_OF
+from my_lib import my_function
+
 
 def main():
     my_int_value = 3
@@ -9,6 +11,7 @@ def main():
     print(dir())
     print(globals())
     print(locals())
+
 
 if __name__ == "__main__":
     main()
