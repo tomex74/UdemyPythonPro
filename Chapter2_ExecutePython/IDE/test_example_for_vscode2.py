@@ -26,8 +26,6 @@ noten.pop(2)
 print(noten)
 
 # List Comprehensions
-my_list = []
-
 my_list2 = []
 for i in range(10):
     my_list2.append(i)
