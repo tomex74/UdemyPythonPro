@@ -1,5 +1,5 @@
 # from my_lib import POWER_OF
-from my_lib import my_function
+from my_lib import my_function , POWER_OF
 
 
 def main():
