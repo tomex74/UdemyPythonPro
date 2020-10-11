@@ -7,6 +7,7 @@ def main():
     parser.add_argument("--name", help="Enter your name (str)", type=str, required=True)
     parser.add_argument("--admin", help="Are your an admin? (bool)", type=bool, required=False)
     args = parser.parse_args()
+
     age = args.age
     name = args.name
     is_admin = args.admin
