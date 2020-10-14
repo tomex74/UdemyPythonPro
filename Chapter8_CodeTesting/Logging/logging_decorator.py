@@ -31,7 +31,7 @@ def divide_integers(a: int, b: int) -> float:
 def main():
     for _ in range(10):
         time.sleep(1.5)
-        print(divide_integers(10, 0))
+        print(divide_integers(10, 2))
 
 
 if __name__ == "__main__":

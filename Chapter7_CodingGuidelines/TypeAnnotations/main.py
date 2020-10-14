@@ -8,8 +8,11 @@ def print_value(val: str):
 
 
 def main():
-    v1 = Vector2D(2, 'hallo')
-    v1 * 'bye'
+    v1 = Vector2D(2, 5)
+    test= v1 * 7
+    print(test)
+
+
 
 
 if __name__ == "__main__":

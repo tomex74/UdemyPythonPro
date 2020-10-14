@@ -193,19 +193,7 @@ class Vector2D:
         else:
             raise TypeError('You must pass in a vector instance or an int/float number!')
 
-    def __truediv__(self, other):
-        """Returns the multiplication of the self vector and the other vector(or number) instance.
-
-        Parameters
-        ----------
-        other : Vector2D or number
-            Other vector instance or scaler value (right-hand-side of the operator)
-
-        Returns
-        -------
-        Vector2D
-            The multiplication of the self vector and the other vector(or number) instance
-        """
+    def __truediv__(self, other): 
         if isinstance(other, numbers.Real):
             if other != 0.0:
                 return Vector2D(self.x / other, self.y / other)

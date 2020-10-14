@@ -161,7 +161,7 @@ class Vector2D:
         self.check_vector_types(other_vector)
         x = self.x + other_vector.x
         y = self.y + other_vector.y
-        return Vector2D(x, y)
+‹        return Vector2D(x, y)
 
     def __sub__(self, other_vector: Vector2D) -> Vector2D:
         """Returns the subtraction vector of the self and the other vector instance.

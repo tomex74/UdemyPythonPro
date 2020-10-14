@@ -1,4 +1,7 @@
+
+
 """Own implementation of a 2D vector class.
+
 """
 import numbers
 from functools import total_ordering
