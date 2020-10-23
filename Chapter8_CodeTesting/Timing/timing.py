@@ -22,7 +22,7 @@ def timing(fn):
 
 @timing
 def test_addition_own_implementation():
-    for _ in range(100_000):
+    for _ in range(500_000):
         v1 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
         v2 = Vector2D(random.randint(-10, 10), random.randint(-10, 10))
         c3 = v1 + v2  # noqa
@@ -41,7 +41,7 @@ import random
 from vector import Vector2D
 '''
     timer = Timer(code_str, setup=import_str)
-    print("Mean computation time: {}".format(sum(timer.repeat(repeat=3, number=100_000)) / 3))
+    print("Mean computation time: {}".format(sum(timer.repeat(repeat=3, number=500_000)) / 3))
 
 
 def main():
